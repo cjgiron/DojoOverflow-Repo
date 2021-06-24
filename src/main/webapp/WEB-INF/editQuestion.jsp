@@ -22,7 +22,7 @@
 	        <form:errors path="tagsInput"/>
 	        <form:input path="tagsInput"/>
 	    </p>
-	   <input type="submit" value="Create"/>
+	   <input type="submit" value="Update"/>
 	</form:form>
 	<a href="/questions">Back to Questions</a>
 </body>

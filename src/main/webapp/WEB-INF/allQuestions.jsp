@@ -19,7 +19,7 @@
 				<tr>
 					<th>Questions</th>
 					<th>Tags</th>
-					<th>Actions</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -27,12 +27,7 @@
 					<tr>
 						<td><a href="/questions/${question.id}"><c:out value="${question.text}"></c:out></a></td>
 						<td><c:out value="${question.tagsInput}"></c:out></td>
-						<td>
-							<form action="/questions/${question.id}/delete" method="post">
-							    <input type="hidden" name="_method" value="delete">
-							    <input type="submit" value="Delete">
-							</form>
-						</td>
+						<td><a href="/questions/${question.id}/edit">Edit</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

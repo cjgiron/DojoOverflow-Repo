@@ -3,6 +3,7 @@ package com.codingdojo.dojooverflow.models;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -16,7 +17,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -40,6 +40,7 @@ public class Question {
     
 	@OneToMany(mappedBy="question", fetch=FetchType.LAZY)
 	private List<Answer> answers;
+	
 	
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(
